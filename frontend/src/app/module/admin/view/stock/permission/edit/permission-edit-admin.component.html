@@ -1,0 +1,72 @@
+        <p-dialog [(visible)]="editDialog" [style]="{width: '70vw'}" header="{{'permission.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+            <ng-template pTemplate="content" >
+                <p-tabView>
+                    <p-tabPanel header="{{'permission.tabPan' | translate}}">
+                        <div class="grid">
+
+                                    <div class="field col-11 md:col-5">
+                                        <label for="1">{{'permission.actionPermission' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="actionPermissions" [(ngModel)]="item.actionPermission" id="1" [filter]="true" filterMatchMode="contains"
+                                                [showClear]="true" optionLabel="reference" placeholder="{{'permission.actionPermission' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+                                        <div class="col-1">
+                                            <label></label>
+                                            <button pButton pRipple type="button" icon="pi pi-plus" (click)="openCreateActionPermission('ActionPermission')" class="p-button-success one-colonne-btn-success-align"></button>
+                                        </div>
+                                    <div class="field col-11 md:col-5">
+                                        <label for="2">{{'permission.modelPermission' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="modelPermissions" [(ngModel)]="item.modelPermission" id="2" [filter]="true" filterMatchMode="contains"
+                                                [showClear]="true" optionLabel="reference" placeholder="{{'permission.modelPermission' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+                                        <div class="col-1">
+                                            <label></label>
+                                            <button pButton pRipple type="button" icon="pi pi-plus" (click)="openCreateModelPermission('ModelPermission')" class="p-button-success one-colonne-btn-success-align"></button>
+                                        </div>
+                                        <div class="field col-12 md:col-6">
+                                            <label for="3">{{'permission.subAttribute' | translate}}</label>
+                                            <input class="mb-2 mr-2" type="text" pInputText  placeholder="{{'permission.subAttribute' | translate}}" id="3" [(ngModel)]="item.subAttribute"
+                                                     />
+                                            
+                                        </div>
+
+
+
+                                        <div class="field align-inputswitch col-12  md:col-6">
+                                            <div  class="label-inputswitch">
+                                                <label for="4">{{'permission.value' | translate}}</label>
+                                            </div>
+                                            <div class="input-switch">
+                                                <p-inputSwitch id="4"  [(ngModel)]="item.value"
+                                                         >
+                                                </p-inputSwitch>
+                                                
+                                            </div>
+                                        </div>
+
+
+                        </div>
+                    </p-tabPanel>
+
+                </p-tabView>
+            </ng-template>
+
+            <ng-template pTemplate="footer" >
+                <div class="grid-footer">
+                        <div>
+                            <button pButton pRipple label="Annuler" icon="pi pi-times" class="p-button-outlined" (click)="hideEditDialog()"></button>
+                        </div>
+                    <div>
+                        <button pButton pRipple label="Valider" icon="pi pi-check" style="margin:10px" (click)="edit()"></button>
+                    </div>
+                </div>
+            </ng-template>
+
+                    <app-action-permission-create-admin></app-action-permission-create-admin>
+                    <app-model-permission-create-admin></app-model-permission-create-admin>
+
+
+    </p-dialog>

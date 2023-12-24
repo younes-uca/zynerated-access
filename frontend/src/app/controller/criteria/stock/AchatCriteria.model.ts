@@ -1,7 +1,7 @@
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
-import {ClientCriteria} from './ClientCriteria.model';
 import {PaiementAchatCriteria} from './PaiementAchatCriteria.model';
 import {AchatItemCriteria} from './AchatItemCriteria.model';
+import {ClientCriteria} from './ClientCriteria.model';
 
 export class AchatCriteria  extends BaseCriteria  {
 

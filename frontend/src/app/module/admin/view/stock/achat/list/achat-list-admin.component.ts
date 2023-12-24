@@ -5,14 +5,14 @@ import {AchatCriteria} from 'src/app/controller/criteria/stock/AchatCriteria.mod
 import {AbstractListController} from 'src/app/zynerator/controller/AbstractListController';
 import { environment } from 'src/environments/environment';
 
-import {ClientDto} from 'src/app/controller/model/stock/Client.model';
-import {ClientAdminService} from 'src/app/controller/service/admin/stock/ClientAdmin.service';
-import {PaiementAchatDto} from 'src/app/controller/model/stock/PaiementAchat.model';
-import {PaiementAchatAdminService} from 'src/app/controller/service/admin/stock/PaiementAchatAdmin.service';
 import {AchatItemDto} from 'src/app/controller/model/stock/AchatItem.model';
 import {AchatItemAdminService} from 'src/app/controller/service/admin/stock/AchatItemAdmin.service';
 import {ProduitDto} from 'src/app/controller/model/stock/Produit.model';
 import {ProduitAdminService} from 'src/app/controller/service/admin/stock/ProduitAdmin.service';
+import {PaiementAchatDto} from 'src/app/controller/model/stock/PaiementAchat.model';
+import {PaiementAchatAdminService} from 'src/app/controller/service/admin/stock/PaiementAchatAdmin.service';
+import {ClientDto} from 'src/app/controller/model/stock/Client.model';
+import {ClientAdminService} from 'src/app/controller/service/admin/stock/ClientAdmin.service';
 
 
 @Component({
@@ -26,7 +26,7 @@ export class AchatListAdminComponent extends AbstractListController<AchatDto, Ac
     clients: Array<ClientDto>;
 
 
-    constructor( private achatService: AchatAdminService  , private clientService: ClientAdminService, private paiementAchatService: PaiementAchatAdminService, private achatItemService: AchatItemAdminService, private produitService: ProduitAdminService) {
+    constructor( private achatService: AchatAdminService  , private paiementAchatService: PaiementAchatAdminService, private achatItemService: AchatItemAdminService, private clientService: ClientAdminService, private produitService: ProduitAdminService) {
         super(achatService);
     }
 

@@ -101,6 +101,11 @@ export class AppMenuComponent implements OnInit {
                             icon: 'pi pi-fw pi-plus-circle',
                             routerLink: ['/app/admin/stock/produit/list']
                           },
+                          {
+                            label: 'Liste permission',
+                            icon: 'pi pi-fw pi-plus-circle',
+                            routerLink: ['/app/admin/stock/permission/list']
+                          },
                 ]
               },
     ];

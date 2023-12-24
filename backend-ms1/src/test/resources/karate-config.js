@@ -51,9 +51,12 @@ function fn() {
         config.paiementAchatUrl = config.adminUri + 'paiementAchat/';
     config.categorieProduitUrl = config.adminUri + 'categorieProduit/';
     config.produitUrl = config.adminUri + 'produit/';
+    config.modelPermissionUrl = config.adminUri + 'modelPermission/';
     config.achatUrl = config.adminUri + 'achat/';
     config.clientUrl = config.adminUri + 'client/';
+    config.permissionUrl = config.adminUri + 'permission/';
     config.achatItemUrl = config.adminUri + 'achatItem/';
+    config.actionPermissionUrl = config.adminUri + 'actionPermission/';
 
     common = karate.callSingle('classpath:common.feature', config);
     config.uniqueId = common.uniqueId

@@ -73,6 +73,17 @@
     },
 
 
+    "modelPermission":{
+        "reference": "Reference",
+        "libelle": "Libelle",
+        "modelPermission": "Model permission",
+        "tabPan": "Model permission",
+        "header": "Liste des model permissions",
+        "deleteModelPermissionConfirmationMessage": "Are you sure you want to delete model permission",
+        "deleteModelPermissionsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
     "achat":{
         "reference": "Reference",
         "dateAchat": "Date achat",
@@ -116,6 +127,23 @@
     },
 
 
+    "permission":{
+        "actionPermission": "Action permission",
+        "actionPermissionPlaceHolder": "Select a Action permission",
+        "actionPermissionPlaceHolderFilter": "Search by Action permission",
+        "modelPermission": "Model permission",
+        "modelPermissionPlaceHolder": "Select a Model permission",
+        "modelPermissionPlaceHolderFilter": "Search by Model permission",
+        "subAttribute": "Sub attribute",
+        "value": "Value",
+        "permission": "Permission",
+        "tabPan": "Permission",
+        "header": "Liste des permissions",
+        "deletePermissionConfirmationMessage": "Are you sure you want to delete permission",
+        "deletePermissionsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
     "achatItem":{
         "produit": "Produit",
         "produitPlaceHolder": "Select a Produit",
@@ -143,6 +171,17 @@
         "header": "Liste des achat items",
         "deleteAchatItemConfirmationMessage": "Are you sure you want to delete achat item",
         "deleteAchatItemsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "actionPermission":{
+        "reference": "Reference",
+        "libelle": "Libelle",
+        "actionPermission": "Action permission",
+        "tabPan": "Action permission",
+        "header": "Liste des action permissions",
+        "deleteActionPermissionConfirmationMessage": "Are you sure you want to delete action permission",
+        "deleteActionPermissionsConfirmationMessage": "Are you sure you want to delete the selected elements"
     },
 
 "appName": "GED"

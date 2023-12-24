@@ -183,6 +183,65 @@ paths:
           description: unexpected error
           schema:
             $ref: '#/definitions/Error'
+  /modelPermissions:
+    get:
+      summary: List all modelPermissions
+      operationId: listModelPermissions
+      tags:
+        - modelPermissions
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of modelPermissions
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/ModelPermissions'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a modelPermission
+      operationId: createModelPermissions
+      tags:
+        - modelPermissions
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /modelPermissions/{modelPermissionId}:
+    get:
+      summary: Info for a specific modelPermission
+      operationId: showModelPermissionById
+      tags:
+        - modelPermissions
+      parameters:
+        - name: modelPermissionId
+          in: path
+          required: true
+          description: The id of the modelPermission to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/ModelPermissions'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
   /achats:
     get:
       summary: List all achats
@@ -301,6 +360,65 @@ paths:
           description: unexpected error
           schema:
             $ref: '#/definitions/Error'
+  /permissions:
+    get:
+      summary: List all permissions
+      operationId: listPermissions
+      tags:
+        - permissions
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of permissions
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Permissions'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a permission
+      operationId: createPermissions
+      tags:
+        - permissions
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /permissions/{permissionId}:
+    get:
+      summary: Info for a specific permission
+      operationId: showPermissionById
+      tags:
+        - permissions
+      parameters:
+        - name: permissionId
+          in: path
+          required: true
+          description: The id of the permission to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Permissions'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
   /achatItems:
     get:
       summary: List all achatItems
@@ -356,6 +474,65 @@ paths:
           description: Expected response to a valid request
           schema:
             $ref: '#/definitions/AchatItems'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /actionPermissions:
+    get:
+      summary: List all actionPermissions
+      operationId: listActionPermissions
+      tags:
+        - actionPermissions
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of actionPermissions
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/ActionPermissions'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a actionPermission
+      operationId: createActionPermissions
+      tags:
+        - actionPermissions
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /actionPermissions/{actionPermissionId}:
+    get:
+      summary: Info for a specific actionPermission
+      operationId: showActionPermissionById
+      tags:
+        - actionPermissions
+      parameters:
+        - name: actionPermissionId
+          in: path
+          required: true
+          description: The id of the actionPermission to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/ActionPermissions'
         default:
           description: unexpected error
           schema:
@@ -436,6 +613,23 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/Produit'
+  ModelPermission:
+    type: "object"
+    required:
+      - id
+      - reference
+      - libelle
+    properties:
+      id:
+        type: int
+      reference:
+        type: string
+      libelle:
+        type: string
+  ModelPermissions:
+    type: array
+    items:
+      $ref: '#/definitions/ModelPermission'
   Achat:
     type: "object"
     required:
@@ -494,6 +688,23 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/Client'
+  Permission:
+    type: "object"
+    required:
+      - id
+      - subAttribute
+      - value
+    properties:
+      id:
+        type: int
+      subAttribute:
+        type: string
+      value:
+        type: boolean
+  Permissions:
+    type: array
+    items:
+      $ref: '#/definitions/Permission'
   AchatItem:
     type: "object"
     required:
@@ -520,6 +731,23 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/AchatItem'
+  ActionPermission:
+    type: "object"
+    required:
+      - id
+      - reference
+      - libelle
+    properties:
+      id:
+        type: int
+      reference:
+        type: string
+      libelle:
+        type: string
+  ActionPermissions:
+    type: array
+    items:
+      $ref: '#/definitions/ActionPermission'
 
   Error:
     type: "object"

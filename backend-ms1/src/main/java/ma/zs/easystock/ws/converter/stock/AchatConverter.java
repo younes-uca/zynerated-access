@@ -4,10 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ma.zs.easystock.zynerator.util.ListUtil;
 
-import ma.zs.easystock.ws.converter.stock.ClientConverter;
-import ma.zs.easystock.ws.converter.stock.PaiementAchatConverter;
 import ma.zs.easystock.ws.converter.stock.AchatItemConverter;
 import ma.zs.easystock.ws.converter.stock.ProduitConverter;
+import ma.zs.easystock.ws.converter.stock.PaiementAchatConverter;
+import ma.zs.easystock.ws.converter.stock.ClientConverter;
 
 
 
@@ -21,24 +21,24 @@ import ma.zs.easystock.ws.dto.stock.AchatDto;
 public class AchatConverter extends AbstractConverter<Achat, AchatDto> {
 
     @Autowired
-    private ClientConverter clientConverter ;
-    @Autowired
-    private PaiementAchatConverter paiementAchatConverter ;
-    @Autowired
     private AchatItemConverter achatItemConverter ;
     @Autowired
     private ProduitConverter produitConverter ;
+    @Autowired
+    private PaiementAchatConverter paiementAchatConverter ;
+    @Autowired
+    private ClientConverter clientConverter ;
     private boolean client;
     private boolean paiementAchats;
     private boolean achatItems;
 
-    public  AchatConverter(){//Client clientPaiementAchat paiementAchatAchatItem achatItemProduit produit,){
+    public  AchatConverter(){//AchatItem achatItemProduit produitPaiementAchat paiementAchatClient client){
         super(Achat.class, AchatDto.class);
         init(true);
-        //this.client =  client ;
-        //this.paiementAchat =  paiementAchat ;
         //this.achatItem =  achatItem ;
         //this.produit =  produit ;
+        //this.paiementAchat =  paiementAchat ;
+        //this.client =  client ;
     }
 
     @Override
@@ -124,18 +124,6 @@ public class AchatConverter extends AbstractConverter<Achat, AchatDto> {
     }
 
 
-    public ClientConverter getClientConverter(){
-        return this.clientConverter;
-    }
-    public void setClientConverter(ClientConverter clientConverter ){
-        this.clientConverter = clientConverter;
-    }
-    public PaiementAchatConverter getPaiementAchatConverter(){
-        return this.paiementAchatConverter;
-    }
-    public void setPaiementAchatConverter(PaiementAchatConverter paiementAchatConverter ){
-        this.paiementAchatConverter = paiementAchatConverter;
-    }
     public AchatItemConverter getAchatItemConverter(){
         return this.achatItemConverter;
     }
@@ -147,6 +135,18 @@ public class AchatConverter extends AbstractConverter<Achat, AchatDto> {
     }
     public void setProduitConverter(ProduitConverter produitConverter ){
         this.produitConverter = produitConverter;
+    }
+    public PaiementAchatConverter getPaiementAchatConverter(){
+        return this.paiementAchatConverter;
+    }
+    public void setPaiementAchatConverter(PaiementAchatConverter paiementAchatConverter ){
+        this.paiementAchatConverter = paiementAchatConverter;
+    }
+    public ClientConverter getClientConverter(){
+        return this.clientConverter;
+    }
+    public void setClientConverter(ClientConverter clientConverter ){
+        this.clientConverter = clientConverter;
     }
     public boolean  isClient(){
         return this.client;

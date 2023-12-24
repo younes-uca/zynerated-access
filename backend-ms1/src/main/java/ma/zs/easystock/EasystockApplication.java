@@ -124,6 +124,11 @@ public class EasystockApplication {
         permissions.add(new Permission("Produit.view"));
         permissions.add(new Permission("Produit.add"));
         permissions.add(new Permission("Produit.delete"));
+        permissions.add(new Permission("ModelPermission.edit"));
+        permissions.add(new Permission("ModelPermission.list"));
+        permissions.add(new Permission("ModelPermission.view"));
+        permissions.add(new Permission("ModelPermission.add"));
+        permissions.add(new Permission("ModelPermission.delete"));
         permissions.add(new Permission("Achat.edit"));
         permissions.add(new Permission("Achat.list"));
         permissions.add(new Permission("Achat.view"));
@@ -134,11 +139,21 @@ public class EasystockApplication {
         permissions.add(new Permission("Client.view"));
         permissions.add(new Permission("Client.add"));
         permissions.add(new Permission("Client.delete"));
+        permissions.add(new Permission("Permission.edit"));
+        permissions.add(new Permission("Permission.list"));
+        permissions.add(new Permission("Permission.view"));
+        permissions.add(new Permission("Permission.add"));
+        permissions.add(new Permission("Permission.delete"));
         permissions.add(new Permission("AchatItem.edit"));
         permissions.add(new Permission("AchatItem.list"));
         permissions.add(new Permission("AchatItem.view"));
         permissions.add(new Permission("AchatItem.add"));
         permissions.add(new Permission("AchatItem.delete"));
+        permissions.add(new Permission("ActionPermission.edit"));
+        permissions.add(new Permission("ActionPermission.list"));
+        permissions.add(new Permission("ActionPermission.view"));
+        permissions.add(new Permission("ActionPermission.add"));
+        permissions.add(new Permission("ActionPermission.delete"));
     }
 
 }

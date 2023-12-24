@@ -20,12 +20,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import ma.zs.easystock.service.facade.admin.stock.ClientAdminService ;
-import ma.zs.easystock.bean.core.stock.Client ;
 import ma.zs.easystock.service.facade.admin.stock.PaiementAchatAdminService ;
 import ma.zs.easystock.bean.core.stock.PaiementAchat ;
 import ma.zs.easystock.service.facade.admin.stock.AchatItemAdminService ;
 import ma.zs.easystock.bean.core.stock.AchatItem ;
+import ma.zs.easystock.service.facade.admin.stock.ClientAdminService ;
+import ma.zs.easystock.bean.core.stock.Client ;
 
 import java.util.List;
 @Service
@@ -109,11 +109,11 @@ public class AchatAdminServiceImpl extends AbstractServiceImpl<Achat, AchatCrite
 
 
     @Autowired
-    private ClientAdminService clientService ;
-    @Autowired
     private PaiementAchatAdminService paiementAchatService ;
     @Autowired
     private AchatItemAdminService achatItemService ;
+    @Autowired
+    private ClientAdminService clientService ;
 
     public AchatAdminServiceImpl(AchatDao dao) {
         super(dao);

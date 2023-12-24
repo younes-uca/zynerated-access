@@ -32,6 +32,10 @@ import { ProduitCreateAdminComponent } from './produit/create/produit-create-adm
 import { ProduitEditAdminComponent } from './produit/edit/produit-edit-admin.component';
 import { ProduitViewAdminComponent } from './produit/view/produit-view-admin.component';
 import { ProduitListAdminComponent } from './produit/list/produit-list-admin.component';
+import { ModelPermissionCreateAdminComponent } from './model-permission/create/model-permission-create-admin.component';
+import { ModelPermissionEditAdminComponent } from './model-permission/edit/model-permission-edit-admin.component';
+import { ModelPermissionViewAdminComponent } from './model-permission/view/model-permission-view-admin.component';
+import { ModelPermissionListAdminComponent } from './model-permission/list/model-permission-list-admin.component';
 import { AchatCreateAdminComponent } from './achat/create/achat-create-admin.component';
 import { AchatEditAdminComponent } from './achat/edit/achat-edit-admin.component';
 import { AchatViewAdminComponent } from './achat/view/achat-view-admin.component';
@@ -40,10 +44,18 @@ import { ClientCreateAdminComponent } from './client/create/client-create-admin.
 import { ClientEditAdminComponent } from './client/edit/client-edit-admin.component';
 import { ClientViewAdminComponent } from './client/view/client-view-admin.component';
 import { ClientListAdminComponent } from './client/list/client-list-admin.component';
+import { PermissionCreateAdminComponent } from './permission/create/permission-create-admin.component';
+import { PermissionEditAdminComponent } from './permission/edit/permission-edit-admin.component';
+import { PermissionViewAdminComponent } from './permission/view/permission-view-admin.component';
+import { PermissionListAdminComponent } from './permission/list/permission-list-admin.component';
 import { AchatItemCreateAdminComponent } from './achat-item/create/achat-item-create-admin.component';
 import { AchatItemEditAdminComponent } from './achat-item/edit/achat-item-edit-admin.component';
 import { AchatItemViewAdminComponent } from './achat-item/view/achat-item-view-admin.component';
 import { AchatItemListAdminComponent } from './achat-item/list/achat-item-list-admin.component';
+import { ActionPermissionCreateAdminComponent } from './action-permission/create/action-permission-create-admin.component';
+import { ActionPermissionEditAdminComponent } from './action-permission/edit/action-permission-edit-admin.component';
+import { ActionPermissionViewAdminComponent } from './action-permission/view/action-permission-view-admin.component';
+import { ActionPermissionListAdminComponent } from './action-permission/list/action-permission-list-admin.component';
 
 import { PasswordModule } from 'primeng/password';
 import { InputTextModule } from 'primeng/inputtext';
@@ -73,6 +85,10 @@ import {PaginatorModule} from 'primeng/paginator';
     ProduitListAdminComponent,
     ProduitViewAdminComponent,
     ProduitEditAdminComponent,
+    ModelPermissionCreateAdminComponent,
+    ModelPermissionListAdminComponent,
+    ModelPermissionViewAdminComponent,
+    ModelPermissionEditAdminComponent,
     AchatCreateAdminComponent,
     AchatListAdminComponent,
     AchatViewAdminComponent,
@@ -81,10 +97,18 @@ import {PaginatorModule} from 'primeng/paginator';
     ClientListAdminComponent,
     ClientViewAdminComponent,
     ClientEditAdminComponent,
+    PermissionCreateAdminComponent,
+    PermissionListAdminComponent,
+    PermissionViewAdminComponent,
+    PermissionEditAdminComponent,
     AchatItemCreateAdminComponent,
     AchatItemListAdminComponent,
     AchatItemViewAdminComponent,
     AchatItemEditAdminComponent,
+    ActionPermissionCreateAdminComponent,
+    ActionPermissionListAdminComponent,
+    ActionPermissionViewAdminComponent,
+    ActionPermissionEditAdminComponent,
   ],
   imports: [
     CommonModule,
@@ -131,6 +155,10 @@ import {PaginatorModule} from 'primeng/paginator';
   ProduitListAdminComponent,
   ProduitViewAdminComponent,
   ProduitEditAdminComponent,
+  ModelPermissionCreateAdminComponent,
+  ModelPermissionListAdminComponent,
+  ModelPermissionViewAdminComponent,
+  ModelPermissionEditAdminComponent,
   AchatCreateAdminComponent,
   AchatListAdminComponent,
   AchatViewAdminComponent,
@@ -139,10 +167,18 @@ import {PaginatorModule} from 'primeng/paginator';
   ClientListAdminComponent,
   ClientViewAdminComponent,
   ClientEditAdminComponent,
+  PermissionCreateAdminComponent,
+  PermissionListAdminComponent,
+  PermissionViewAdminComponent,
+  PermissionEditAdminComponent,
   AchatItemCreateAdminComponent,
   AchatItemListAdminComponent,
   AchatItemViewAdminComponent,
   AchatItemEditAdminComponent,
+  ActionPermissionCreateAdminComponent,
+  ActionPermissionListAdminComponent,
+  ActionPermissionViewAdminComponent,
+  ActionPermissionEditAdminComponent,
   ],
   entryComponents: [],
 })

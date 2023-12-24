@@ -76,6 +76,18 @@
     },
 
 
+    "modelPermission":{
+        "reference": "Reference",
+        "libelle": "Libelle",
+        "modelPermission": "Model permission",
+        "tabPan": "Model permission",
+        "header": "Liste des model permissions",
+        "deleteModelPermissionConfirmationMessage": "Voulez vous vraiment supprimer model permission",
+        "deleteModelPermissionsConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
     "achat":{
         "reference": "Reference",
         "dateAchat": "Date achat",
@@ -121,6 +133,24 @@
     },
 
 
+    "permission":{
+        "actionPermission": "Action permission",
+        "actionPermissionPlaceHolder": "Select a Action permission",
+        "actionPermissionPlaceHolderFilter": "Search by Action permission",
+        "modelPermission": "Model permission",
+        "modelPermissionPlaceHolder": "Select a Model permission",
+        "modelPermissionPlaceHolderFilter": "Search by Model permission",
+        "subAttribute": "Sub attribute",
+        "value": "Value",
+        "permission": "Permission",
+        "tabPan": "Permission",
+        "header": "Liste des permissions",
+        "deletePermissionConfirmationMessage": "Voulez vous vraiment supprimer permission",
+        "deletePermissionsConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
     "achatItem":{
         "produit": "Produit",
         "produitPlaceHolder": "Select a Produit",
@@ -148,6 +178,18 @@
         "header": "Liste des achat items",
         "deleteAchatItemConfirmationMessage": "Voulez vous vraiment supprimer achat item",
         "deleteAchatItemsConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
+
+    },
+
+
+    "actionPermission":{
+        "reference": "Reference",
+        "libelle": "Libelle",
+        "actionPermission": "Action permission",
+        "tabPan": "Action permission",
+        "header": "Liste des action permissions",
+        "deleteActionPermissionConfirmationMessage": "Voulez vous vraiment supprimer action permission",
+        "deleteActionPermissionsConfirmationMessage": "Voulez vous vraiment supprimer les elments selectionnes"
 
     },
 
