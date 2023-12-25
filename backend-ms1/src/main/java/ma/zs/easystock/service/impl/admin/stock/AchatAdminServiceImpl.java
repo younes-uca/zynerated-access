@@ -34,7 +34,7 @@ public class AchatAdminServiceImpl extends AbstractServiceImpl<Achat, AchatCrite
 
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class, readOnly = false)
     public Achat create(Achat t) {
-    
+        super.create(t);
         if (t.getPaiementAchats() != null) {
                 t.getPaiementAchats().forEach(element-> {
                     element.setAchat(t);
