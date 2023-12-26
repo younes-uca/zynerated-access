@@ -29,12 +29,14 @@ export class AchatListAdminComponent extends AbstractListController<AchatDto, Ac
     constructor( private achatService: AchatAdminService  , private paiementAchatService: PaiementAchatAdminService, private achatItemService: AchatItemAdminService, private clientService: ClientAdminService, private produitService: ProduitAdminService) {
         super(achatService);
     }
+    createAction = false;
 
     ngOnInit(): void {
         this.findPaginatedByCriteria();
         this.initExport();
         this.initCol();
         this.loadClient();
+        this.hasCreateAction();
     }
 
 
@@ -48,9 +50,11 @@ export class AchatListAdminComponent extends AbstractListController<AchatDto, Ac
         ];
     }
 
-
+   public  hasCreateAction(){
+         this.achatService.hasCreatePermission().subscribe(data => this.createAction = data , error => console.log(error) );
+   }
     public async loadClient(){
-       this.clientService.findAllOptimized().subscribe(clients => this.clients = clients, error => console.log(error))
+       this.clientService.findAllOptimized().subscribe(clients => this.clients = clients, error => console.log(error));
     }
 
 	public initDuplicate(res: AchatDto) {

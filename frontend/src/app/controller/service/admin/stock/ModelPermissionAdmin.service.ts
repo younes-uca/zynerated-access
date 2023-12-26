@@ -5,7 +5,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import { RoleService } from 'src/app/zynerator/security/Role.service';
 import {environment} from 'src/environments/environment';
 
-import {ModelPermissionDto} from 'src/app/controller/model/stock/ModelPermission.model';
+import {ModelPermissionDto} from 'src/app/zynerator/security/ModelPermission.model';
 import {ModelPermissionCriteria} from 'src/app/controller/criteria/stock/ModelPermissionCriteria.model';
 import {AbstractService} from 'src/app/zynerator/service/AbstractService';
 
@@ -26,5 +26,8 @@ export class ModelPermissionAdminService extends AbstractService<ModelPermission
 
     public constrcutCriteria(): ModelPermissionCriteria {
         return new ModelPermissionCriteria();
+    }
+    getModelName(): string {
+        return 'Achat';
     }
 }

@@ -5,7 +5,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import { RoleService } from 'src/app/zynerator/security/Role.service';
 import {environment} from 'src/environments/environment';
 
-import {PermissionDto} from 'src/app/controller/model/stock/Permission.model';
+import {PermissionDto} from 'src/app/zynerator/security/Permission.model';
 import {PermissionCriteria} from 'src/app/controller/criteria/stock/PermissionCriteria.model';
 import {AbstractService} from 'src/app/zynerator/service/AbstractService';
 
@@ -17,7 +17,10 @@ export class PermissionAdminService extends AbstractService<PermissionDto, Permi
      constructor(private http: HttpClient, private roleService: RoleService) {
         super();
         this.setHttp(http);
-        this.setApi(environment.apiUrl + 'admin/permission/');
+        this.setApi(environment.apiUrl + 'permission/');
+    }
+    public findByModelPermissionReference(reference: string): Observable<Array<PermissionDto>> {
+        return this.http.get<Array<PermissionDto>>(this.API + 'modelPermission/reference/' + reference);
     }
 
     public constrcutDto(): PermissionDto {
@@ -26,5 +29,8 @@ export class PermissionAdminService extends AbstractService<PermissionDto, Permi
 
     public constrcutCriteria(): PermissionCriteria {
         return new PermissionCriteria();
+    }
+    getModelName(): string {
+        return 'Achat';
     }
 }

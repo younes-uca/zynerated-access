@@ -27,4 +27,7 @@ export class PaiementAchatAdminService extends AbstractService<PaiementAchatDto,
     public constrcutCriteria(): PaiementAchatCriteria {
         return new PaiementAchatCriteria();
     }
+    getModelName(): string {
+        return 'Achat';
+    }
 }

@@ -1,7 +1,7 @@
 package  ma.zs.easystock.dao.specification.core.stock;
 
 import ma.zs.easystock.dao.criteria.core.stock.ModelPermissionCriteria;
-import ma.zs.easystock.bean.core.stock.ModelPermission;
+import ma.zs.easystock.zynerator.security.bean.ModelPermission;
 import ma.zs.easystock.zynerator.specification.AbstractSpecification;
 
 

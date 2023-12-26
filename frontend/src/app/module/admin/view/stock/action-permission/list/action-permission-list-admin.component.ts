@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActionPermissionAdminService} from 'src/app/controller/service/admin/stock/ActionPermissionAdmin.service';
-import {ActionPermissionDto} from 'src/app/controller/model/stock/ActionPermission.model';
+import {ActionPermissionDto} from 'src/app/zynerator/security/ActionPermission.model';
 import {ActionPermissionCriteria} from 'src/app/controller/criteria/stock/ActionPermissionCriteria.model';
 import {AbstractListController} from 'src/app/zynerator/controller/AbstractListController';
 import { environment } from 'src/environments/environment';

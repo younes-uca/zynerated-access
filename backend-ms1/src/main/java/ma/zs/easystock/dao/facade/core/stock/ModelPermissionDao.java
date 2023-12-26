@@ -2,9 +2,9 @@ package ma.zs.easystock.dao.facade.core.stock;
 
 import org.springframework.data.jpa.repository.Query;
 import ma.zs.easystock.zynerator.repository.AbstractRepository;
-import ma.zs.easystock.bean.core.stock.ModelPermission;
+import ma.zs.easystock.zynerator.security.bean.ModelPermission;
 import org.springframework.stereotype.Repository;
-import ma.zs.easystock.bean.core.stock.ModelPermission;
+
 import java.util.List;
 
 

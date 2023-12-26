@@ -33,7 +33,7 @@ export class RoleService {
         let permissions: string[];
         if (foundRole) {
             permissions = foundRole.permissions
-                .map(permission => permission.name)
+                .map(permission => permission.modelPermission + '.' + permission.actionPermission)
                 .filter(name => name.split('.')[0].toLocaleLowerCase() == pojo.toLocaleLowerCase())
                 .filter(name => name.split('.')[1] == action)
         }

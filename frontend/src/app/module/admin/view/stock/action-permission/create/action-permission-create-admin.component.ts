@@ -3,7 +3,7 @@ import {Component, OnInit, Input} from '@angular/core';
 import { AbstractCreateController } from 'src/app/zynerator/controller/AbstractCreateController';
 
 import {ActionPermissionAdminService} from 'src/app/controller/service/admin/stock/ActionPermissionAdmin.service';
-import {ActionPermissionDto} from 'src/app/controller/model/stock/ActionPermission.model';
+import {ActionPermissionDto} from 'src/app/zynerator/security/ActionPermission.model';
 import {ActionPermissionCriteria} from 'src/app/controller/criteria/stock/ActionPermissionCriteria.model';
 @Component({
   selector: 'app-action-permission-create-admin',

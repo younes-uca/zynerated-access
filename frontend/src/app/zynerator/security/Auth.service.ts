@@ -4,10 +4,12 @@ import { Router } from '@angular/router';
 
 import {environment} from 'src/environments/environment';
 
-import { BehaviorSubject } from 'rxjs';
+import {BehaviorSubject, Observable} from 'rxjs';
 import { Role } from './Role.model';
 import { User } from './User.model';
 import { TokenService } from './Token.service';
+import {Message, MessageService} from 'primeng/api';
+import {ServiceLocator} from '../service/ServiceLocator';
 
 @Injectable({
   providedIn: 'root'
@@ -22,23 +24,58 @@ export class AuthService {
     public error: string = null;
 
 
-    constructor(private http: HttpClient, private tokenService: TokenService, private router: Router) { }
+    constructor(private http: HttpClient, private tokenService: TokenService, private router: Router, private  messageService: MessageService ) { }
 
-        public loginAdmin(username: string, password: string) {
-       this.http.post<any>(this.API + 'login', { username, password }, { observe: 'response' }).subscribe(
+    public loginAdmin(username: string, password: string) {
+        this.http.post<any>(this.API + 'login', { username, password }, { observe: 'response' }).subscribe(
             resp => {
                 this.error = null;
                 const jwt = resp.headers.get('Authorization');
                 jwt != null ? this.tokenService.saveToken(jwt) : false;
                 this.loadInfos();
+                this.messageService.add({
+                    severity: 'success',
+                    summary: 'logged successfully',
+                    detail: '',
+                    life: 3000
+                });
                 console.log('you are logged in successfully');
                 this.router.navigate(['/' + environment.rootAppUrl + '/admin']);
             }, (error: HttpErrorResponse) => {
-                this.error = error.error;
-                console.log(error);
+                switch (error.status) {
+                    case 401:
+                        this.error = 'Invalid username or password';
+                        this.messageService.add({
+                            severity: 'danger',
+                            summary: 'logged failed',
+                            detail: 'Invalid username or password',
+                            life: 3000
+                        });
+                        break;
+                    case 403:
+                        this.error = 'Access forbidden';
+                        this.messageService.add({
+                            severity: 'danger',
+                            summary: 'logged failed',
+                            detail: 'Access forbidden',
+                            life: 3000
+                        });
+                        break;
+                    default:
+                        this.error = 'An error occurred';
+                        this.messageService.add({
+                            severity: 'danger',
+                            summary: 'logged failed',
+                            detail: 'An error occurred',
+                            life: 3000
+                        });
+                        break;
+                }
+                console.log(this.error);
             }
         );
     }
+
 
     public loadInfos() {
         const tokenDecoded = this.tokenService.decode();

@@ -1,13 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {PermissionAdminService} from 'src/app/controller/service/admin/stock/PermissionAdmin.service';
-import {PermissionDto} from 'src/app/controller/model/stock/Permission.model';
+import {PermissionDto} from 'src/app/zynerator/security/Permission.model';
 import {PermissionCriteria} from 'src/app/controller/criteria/stock/PermissionCriteria.model';
 import {AbstractListController} from 'src/app/zynerator/controller/AbstractListController';
 import { environment } from 'src/environments/environment';
 
-import {ActionPermissionDto} from 'src/app/controller/model/stock/ActionPermission.model';
+import {ActionPermissionDto} from 'src/app/zynerator/security/ActionPermission.model';
 import {ActionPermissionAdminService} from 'src/app/controller/service/admin/stock/ActionPermissionAdmin.service';
-import {ModelPermissionDto} from 'src/app/controller/model/stock/ModelPermission.model';
+import {ModelPermissionDto} from 'src/app/zynerator/security/ModelPermission.model';
 import {ModelPermissionAdminService} from 'src/app/controller/service/admin/stock/ModelPermissionAdmin.service';
 
 

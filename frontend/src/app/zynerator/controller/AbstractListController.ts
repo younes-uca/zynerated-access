@@ -72,6 +72,7 @@ export class AbstractListController<DTO extends BaseDto, CRITERIA extends BaseCr
         }
     }
     public findPaginatedByCriteria() {
+
         this.service.findPaginatedByCriteria(this.criteria).subscribe(paginatedItems => {
             this.items = paginatedItems.list;
             this.totalRecords = paginatedItems.dataSize;

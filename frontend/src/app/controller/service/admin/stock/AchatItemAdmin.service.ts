@@ -27,4 +27,7 @@ export class AchatItemAdminService extends AbstractService<AchatItemDto, AchatIt
     public constrcutCriteria(): AchatItemCriteria {
         return new AchatItemCriteria();
     }
+    getModelName(): string {
+        return 'Achat';
+    }
 }

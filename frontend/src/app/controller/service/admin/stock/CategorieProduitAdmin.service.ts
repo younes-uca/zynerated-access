@@ -27,4 +27,7 @@ export class CategorieProduitAdminService extends AbstractService<CategorieProdu
     public constrcutCriteria(): CategorieProduitCriteria {
         return new CategorieProduitCriteria();
     }
+    getModelName(): string {
+        return 'Achat';
+    }
 }

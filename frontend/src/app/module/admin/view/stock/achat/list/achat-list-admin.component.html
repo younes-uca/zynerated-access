@@ -4,7 +4,7 @@
         <div class="card">
             <p-toolbar styleClass="mb-4">
                 <ng-template pTemplate="left">
-                                        <button pButton pRipple label=" {{'new' | translate}}" icon="pi pi-plus" class="p-button-success mr-2 mb-2" (click)="openCreate('Achat')"></button>
+                                        <button pButton pRipple label=" {{'new' | translate}}" icon="pi pi-plus" class="p-button-success mr-2 mb-2" (click)="openCreate('Achat')" *ngIf="createAction"></button>
                     <button [disabled]="isSelectionDisabled()" pButton pRipple label=" {{'delete' | translate}}" icon="pi pi-trash" class="p-button-danger mr-2 mb-2" (click)=deleteMultiple()></button>
                     <button pButton pRipple label=" {{'search' | translate}}" icon="pi pi-{{findByCriteriaShow?'angle-down':'angle-right'}}" class="p-button-warning mr-2 mb-2" (click)="this.showSearch()"></button>
                 </ng-template>
@@ -173,7 +173,7 @@
             </p-table>
         </div>
 
-        <app-achat-create-admin  *ngIf="createDialog"></app-achat-create-admin>
+        <app-achat-create-admin  *ngIf="createDialog && createAction"></app-achat-create-admin>
         <app-achat-edit-admin  *ngIf="editDialog"></app-achat-edit-admin>
         <app-achat-view-admin  *ngIf="viewDialog"></app-achat-view-admin>
         <p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>

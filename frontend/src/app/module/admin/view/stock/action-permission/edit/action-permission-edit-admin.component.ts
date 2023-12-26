@@ -4,7 +4,7 @@ import {Component, OnInit, Input} from '@angular/core';
 import {AbstractEditController} from 'src/app/zynerator/controller/AbstractEditController';
 
 import {ActionPermissionAdminService} from 'src/app/controller/service/admin/stock/ActionPermissionAdmin.service';
-import {ActionPermissionDto} from 'src/app/controller/model/stock/ActionPermission.model';
+import {ActionPermissionDto} from 'src/app/zynerator/security/ActionPermission.model';
 import {ActionPermissionCriteria} from 'src/app/controller/criteria/stock/ActionPermissionCriteria.model';
 
 

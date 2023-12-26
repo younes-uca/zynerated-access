@@ -27,4 +27,7 @@ export class ClientAdminService extends AbstractService<ClientDto, ClientCriteri
     public constrcutCriteria(): ClientCriteria {
         return new ClientCriteria();
     }
+    getModelName(): string {
+        return 'Achat';
+    }
 }

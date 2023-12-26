@@ -5,7 +5,7 @@ import {AbstractViewController} from 'src/app/zynerator/controller/AbstractViewC
 import { environment } from 'src/environments/environment';
 
 import {ModelPermissionAdminService} from 'src/app/controller/service/admin/stock/ModelPermissionAdmin.service';
-import {ModelPermissionDto} from 'src/app/controller/model/stock/ModelPermission.model';
+import {ModelPermissionDto} from 'src/app/zynerator/security/ModelPermission.model';
 import {ModelPermissionCriteria} from 'src/app/controller/criteria/stock/ModelPermissionCriteria.model';
 
 @Component({

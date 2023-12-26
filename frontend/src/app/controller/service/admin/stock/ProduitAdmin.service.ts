@@ -27,4 +27,7 @@ export class ProduitAdminService extends AbstractService<ProduitDto, ProduitCrit
     public constrcutCriteria(): ProduitCriteria {
         return new ProduitCriteria();
     }
+    getModelName(): string {
+        return 'Achat';
+    }
 }

@@ -3,6 +3,7 @@ package ma.zs.easystock.zynerator.security.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import ma.zs.easystock.zynerator.security.service.facade.PermissionAdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,7 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 import  ma.zs.easystock.zynerator.security.bean.Role;
 import  ma.zs.easystock.zynerator.security.bean.Permission;
 import ma.zs.easystock.zynerator.security.dao.RoleDao;
-import ma.zs.easystock.zynerator.security.service.facade.PermissionService;
 import ma.zs.easystock.zynerator.security.service.facade.RoleService;
 
 
@@ -22,7 +22,7 @@ public class RoleServiceImpl  implements RoleService {
     private RoleDao roleDao;
 
     @Autowired
-    private PermissionService permissionService;
+    private PermissionAdminService permissionService;
 
     @Override
     public List<Role> findAll() {
@@ -84,7 +84,7 @@ public class RoleServiceImpl  implements RoleService {
         if(r != null) return r;
         List<Permission> perms = new ArrayList<>();
         role.getPermissions().forEach(perm -> {
-            perms.add(permissionService.save(perm));
+            perms.add(permissionService.create(perm));
         });
         role.setPermissions(perms);
         return roleDao.save(role);
